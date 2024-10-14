@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 
-// Vertex Shader
 const vertexShader = `
   varying vec2 vUv;
   void main() {
@@ -10,7 +9,6 @@ const vertexShader = `
   }
 `;
 
-// Fragment Shader (black hole distortion)
 const fragmentShader = `
   varying vec2 vUv;
   uniform float time;
@@ -36,14 +34,14 @@ const BlackHole = () => {
   const meshRef = useRef();
   const { gl } = useThree();
 
-  // Animate the shader material over time
+
   useFrame(({ clock }) => {
     if (materialRef.current) {
       materialRef.current.uniforms.time.value = clock.getElapsedTime();
     }
   });
 
-  // Set the background color to dark space-like tone
+
   gl.setClearColor('#000022', 1);  // Dark bluish space-like background
 
   return (
