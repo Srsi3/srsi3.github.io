@@ -2,7 +2,7 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import BlackHole from './BlackHole';
-import GlowingOrb from './GlowingOrb'; 
+import GlowingOrb from './Components/GlowingOrb'; 
 
 const App = () => {
   return (

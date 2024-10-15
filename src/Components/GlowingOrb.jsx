@@ -1,5 +1,5 @@
 import React from 'react';
-
+//Currently shaders not actually glowing, fix later
 const GlowingOrb = ({ position }) => {
   return (
     <mesh position={position}>
